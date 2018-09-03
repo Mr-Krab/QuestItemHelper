@@ -8,10 +8,10 @@
             "Mr_Krab"
         ],
         "dependencies": [
-            "spongeapi@7.1.0-SNAPSHOT"
+            "spongeapi@7.1.0"
         ],
         "requiredMods": [
-            "spongeapi@7.1.0-SNAPSHOT"
+            "spongeapi@7.1.0"
         ]
     }
 ]

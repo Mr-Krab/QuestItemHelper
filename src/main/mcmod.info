@@ -1,0 +1,17 @@
+[
+    {
+        "modid": "questitemhelper",
+        "name": "QuestItemHelper",
+        "version": "1.0.0-S7.1-RELEASE",
+        "description": "Plugin for additional customization of quest items.",
+        "authorList": [
+            "Mr_Krab"
+        ],
+        "dependencies": [
+            "spongeapi@7.1.0-SNAPSHOT"
+        ],
+        "requiredMods": [
+            "spongeapi@7.1.0-SNAPSHOT"
+        ]
+    }
+]

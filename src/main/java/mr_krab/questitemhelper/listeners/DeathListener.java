@@ -37,7 +37,7 @@ public class DeathListener {
         				slot.clear();
         				Task.builder().delay(5, TimeUnit.MILLISECONDS).execute(() -> {
         					slot.offer(itemStack);
-        					player.sendMessage(plugin.getLocale().getString("save.on.death", itemName));
+        					player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("save.on.death", itemName));
         				}).submit(plugin);
         			}
         		} else if(!plugin.getRootNode().getNode("Items", "ID", itemID).isVirtual()) {
@@ -45,7 +45,7 @@ public class DeathListener {
         				slot.clear();
         				Task.builder().delay(5, TimeUnit.MILLISECONDS).execute(() -> {
         					slot.offer(itemStack);
-        					player.sendMessage(plugin.getLocale().getString("save.on.death", itemID));
+        					player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("save.on.death", itemID));
         				}).submit(plugin);
         			}
         		}

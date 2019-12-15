@@ -26,12 +26,12 @@ public class ItemUseListener {
 			String itemID = itemStack.getType().getId();
 			if(!plugin.getRootNode().getNode("Items", "Name", itemName).isVirtual()) {
 				if(!plugin.getRootNode().getNode("Items", "Name", itemName, "Use").getBoolean()) {
-					player.sendMessage(plugin.getLocale().getString("use.canceled", itemName));
+					player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("use.canceled", itemName));
 					event.setCancelled(true);
 				}
 			} else if(!plugin.getRootNode().getNode("Items", "ID", itemID).isVirtual()) {
 				if(!plugin.getRootNode().getNode("Items", "ID", itemID, "Use").getBoolean()) {
-					player.sendMessage(plugin.getLocale().getString("use.canceled", itemID));
+					player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("use.canceled", itemID));
 					event.setCancelled(true);
 				}
 			}

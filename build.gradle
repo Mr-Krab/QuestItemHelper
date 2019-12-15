@@ -33,14 +33,15 @@ repositories {
         name = "Forge"
         url = "http://files.minecraftforge.net/maven"
     }
-    maven {
-        name = 'bstats'
-        url = 'http://repo.bstats.org/content/repositories/releases/'
-    }
+	maven { 
+		name = "LocaleAPI"
+		url = 'https://jitpack.io' 
+	}
 }
 
 dependencies {
     compile("org.spongepowered:spongeapi:${spongeapi}")
+    implementation 'com.github.Mr-Krab:LocaleAPI:1.0'
 }
 
 spongestart {

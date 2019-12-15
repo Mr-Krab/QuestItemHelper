@@ -27,12 +27,12 @@ public class DropListener {
 				String itemID = itemStack.getType().getId();
 				if(!plugin.getRootNode().getNode("Items", "Name", itemName).isVirtual()) {
 					if(!plugin.getRootNode().getNode("Items", "Name", itemName, "Drop").getBoolean()) {
-						player.sendMessage(plugin.getLocale().getString("drop.canceled", itemName));
+						player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("drop.canceled", itemName));
 						event.setCancelled(true);
 					}
 				} else if(!plugin.getRootNode().getNode("Items", "ID", itemID).isVirtual()) {
 					if(!plugin.getRootNode().getNode("Items", "ID", itemID, "Drop").getBoolean()) {
-						player.sendMessage(plugin.getLocale().getString("drop.canceled", itemID));
+						player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("drop.canceled", itemID));
 						event.setCancelled(true);
 					}
 				}

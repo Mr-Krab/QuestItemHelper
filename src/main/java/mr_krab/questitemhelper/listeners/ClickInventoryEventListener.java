@@ -35,7 +35,7 @@ public class ClickInventoryEventListener {
         					if(event.getTargetInventory() instanceof Container) {
         						Container container = event.getTargetInventory();
         							if(container.isViewedSlot(transaction.getSlot().transform())) {
-        								player.sendMessage(plugin.getLocale().getString("container.click.canceled", itemName));
+        								player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("container.click.canceled", itemName));
         								event.setCancelled(true);
         							}
         					}
@@ -45,7 +45,7 @@ public class ClickInventoryEventListener {
         					if(event.getTargetInventory() instanceof Container) {
         						Container container = event.getTargetInventory();
         						if(container.isViewedSlot(transaction.getSlot().transform())) {
-        							player.sendMessage(plugin.getLocale().getString("container.click.canceled", itemID));
+        							player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("container.click.canceled", itemID));
         							event.setCancelled(true);
         						}
         					}
@@ -71,7 +71,7 @@ public class ClickInventoryEventListener {
         					if(event.getTargetInventory() instanceof Container) {
         						Container container = event.getTargetInventory();
         							if(container.isViewedSlot(transaction.getSlot().transform())) {
-        								player.sendMessage(plugin.getLocale().getString("container.click.canceled", itemName));
+        								player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("container.click.canceled", itemName));
         								event.setCancelled(true);
         							}
         					}
@@ -81,7 +81,7 @@ public class ClickInventoryEventListener {
         					if(event.getTargetInventory() instanceof Container) {
         						Container container = event.getTargetInventory();
         						if(container.isViewedSlot(transaction.getSlot().transform())) {
-        							player.sendMessage(plugin.getLocale().getString("container.click.canceled", itemID));
+        							player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("container.click.canceled", itemID));
         							event.setCancelled(true);
         						}
         					}

@@ -30,7 +30,7 @@ public class PickUpListener {
 					int max = plugin.getRootNode().getNode("Items", "Name", itemName, "MaxStack").getInt();
 					if(!plugin.getRootNode().getNode("Items", "Name", itemName, "PickUpIfExists").getBoolean()) {
 						if(player.getInventory().contains(itemStack) && player.getInventory().query(QueryOperationTypes.ITEM_STACK_IGNORE_QUANTITY.of(itemStack)).totalItems() >= max) {
-							player.sendMessage(plugin.getLocale().getString("pickup.canceled", itemName));
+							player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("pickup.canceled", itemName));
 							event.setCancelled(true);
 						}
 					}
@@ -38,7 +38,7 @@ public class PickUpListener {
 					int max = plugin.getRootNode().getNode("Items", "ID", itemID, "MaxStack").getInt();
 					if(!plugin.getRootNode().getNode("Items", "ID", itemID, "PickUpIfExists").getBoolean()) {
 						if(player.getInventory().contains(itemStack) && player.getInventory().query(QueryOperationTypes.ITEM_STACK_IGNORE_QUANTITY.of(itemStack)).totalItems() >= max) {
-							player.sendMessage(plugin.getLocale().getString("pickup.canceled", itemID));
+							player.sendMessage(plugin.getOrDefaultLocale(player.getLocale()).getString("pickup.canceled", itemID));
 							event.setCancelled(true);
 						}
 					}
